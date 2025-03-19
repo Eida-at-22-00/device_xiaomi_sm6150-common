@@ -225,11 +225,25 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.software.ipsec_tunnels.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.software.ipsec_tunnels.xml
 
 # Overlay
+PRODUCT_ENFORCE_RRO_TARGETS += *
 DEVICE_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay \
     $(LOCAL_PATH)/overlay-lineage
 
-PRODUCT_ENFORCE_RRO_TARGETS += *
+PRODUCT_PACKAGES += \
+    CarrierConfigCommon \
+    FrameworksResCommon \
+    NetworkStackResCommon \
+    SettingsProviderResCommon \
+    SettingsResCommon \
+    SystemUIResCommon \
+    TelephonyResCommon \
+    TetheringResCommon \
+    WifiResCommon
+
+PRODUCT_PACKAGES += \
+    LineageDialerOverlay \
+    LineageSDKOverlay
 
 # Partitions
 PRODUCT_PACKAGES += \
@@ -252,10 +266,6 @@ PRODUCT_COPY_FILES += \
 # QTI fwk-detect
 PRODUCT_PACKAGES += \
     libvndfwk_detect_jni.qti.vendor # Needed by CNE app
-
-# RIL
-PRODUCT_PACKAGES += \
-    CarrierConfigOverlay
 
 # Recovery
 PRODUCT_PACKAGES += \
@@ -363,7 +373,6 @@ PRODUCT_PACKAGES += \
     ipacm \
     IPACM_cfg.xml \
     libwpa_client \
-    WifiOverlay \
     wpa_supplicant \
     wpa_supplicant.conf
 
