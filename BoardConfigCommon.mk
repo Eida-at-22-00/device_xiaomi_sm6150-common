@@ -49,6 +49,15 @@ BOARD_SUPPORTS_SOUND_TRIGGER := true
 TARGET_BOOTLOADER_BOARD_NAME := sm6150
 TARGET_NO_BOOTLOADER := true
 
+# Display
+TARGET_GRALLOC_HANDLE_HAS_RESERVED_SIZE := true
+TARGET_USES_DISPLAY_RENDER_INTENTS := true
+
+# Graphics
+TARGET_USES_GRALLOC4 := true
+TARGET_USES_HWC2 := true
+TARGET_USES_ION := true
+
 # Filesystem
 TARGET_FS_CONFIG_GEN := $(COMMON_PATH)/configs/config.fs
 
@@ -84,9 +93,6 @@ BOARD_KERNEL_CMDLINE += loop.max_part=7
 BOARD_INCLUDE_DTB_IN_BOOTIMG := true
 BOARD_BOOTIMG_HEADER_VERSION := 2
 BOARD_MKBOOTIMG_ARGS := --header_version $(BOARD_BOOTIMG_HEADER_VERSION)
-
-# Media
-TARGET_USES_ION := true
 
 # Partitions
 -include vendor/lineage/config/BoardConfigReservedSize.mk
