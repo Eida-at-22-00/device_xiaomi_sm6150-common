@@ -1,0 +1,1 @@
+type sysfs_thermal, sysfs_type, fs_type;

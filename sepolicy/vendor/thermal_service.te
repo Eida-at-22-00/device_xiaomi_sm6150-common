@@ -1,0 +1,17 @@
+type thermal_service, domain;
+type thermal_service_exec, exec_type, file_type, system_file_type;
+
+init_daemon_domain(thermal_service)
+
+allow thermal_service sysfs_thermal:dir search;
+allow thermal_service sysfs_thermal:file rw_file_perms;
+
+allow thermal_service activity_service:service_manager find;
+allow thermal_service system_server:binder { call transfer };
+
+allow thermal_service system_server:binder call;
+
+get_prop(thermal_service, system_prop)
+
+allow thermal_service app_data_file:dir search;
+allow thermal_service app_data_file:file rw_file_perms;

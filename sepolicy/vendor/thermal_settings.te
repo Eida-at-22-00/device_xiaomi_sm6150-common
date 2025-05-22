@@ -1,0 +1,10 @@
+type thermal_settings_app, domain;
+app_domain(thermal_settings_app)
+
+allow thermal_settings_app sysfs_thermal:dir search;
+allow thermal_settings_app sysfs_thermal:file rw_file_perms;
+
+allow thermal_settings_app thermal_service:service_manager find;
+
+allow thermal_settings_app activity_service:service_manager find;
+allow thermal_settings_app system_server:binder call;
