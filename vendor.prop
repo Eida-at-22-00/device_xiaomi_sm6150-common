@@ -194,6 +194,9 @@ persist.vendor.radio.vdp_on_ims_cap=1
 # Media
 debug.stagefright.c2inputsurface=-1
 
+# Incremental FS
+ro.incremental.enable=true
+
 # Netflix
 vendor.netflix.bsp_rev=Q6150-17263-1
 
