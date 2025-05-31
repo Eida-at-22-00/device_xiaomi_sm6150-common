@@ -1,0 +1,4 @@
+type thermal_sysfs, fs_type, sysfs_type;
+
+neverallow untrusted_app thermal_sysfs:file *;
+neverallow isolated_app thermal_sysfs:file *;

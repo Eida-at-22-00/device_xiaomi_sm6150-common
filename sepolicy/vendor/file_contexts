@@ -69,6 +69,9 @@
 # Remosaic
 /vendor/bin/remosaic_daemon                                          u:object_r:remosaic_daemon_exec:s0
 
+# Thermal
+/sys/class/thermal/thermal_message/sconfig                           u:object_r:thermal_sysfs:s0
+
 # WiFi
 /vendor/bin/nv_mac                                                   u:object_r:vendor_wcnss_service_exec:s0
 
