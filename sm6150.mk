@@ -94,11 +94,6 @@ PRODUCT_PACKAGES += \
     libldacBT_enc
 
 # Camera
-$(call soong_config_set,libcameraservice,ext_lib,libcameraservice_extension.sm6150)
-$(call soong_config_set,camera,override_format_from_reserved,true)
-$(call soong_config_set,camera,package_name,com.android.camera)
-$(call soong_config_set,camera,uses_miui_camera,true)
-
 PRODUCT_PACKAGES += \
     android.hardware.camera.provider@2.4-impl \
     android.hardware.camera.provider@2.4-service_64
