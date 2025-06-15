@@ -100,7 +100,7 @@
     </hal>
     <hal format="aidl" optional="true">
         <name>android.hardware.wifi</name>
-        <version>2</version>
+        <version>3</version>
         <interface>
             <name>IWifi</name>
             <instance>default</instance>
